@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cadastrar Veículo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Revenda • Publicar</div>
+    <div class="top-actions">
+      <button id="dealWhats" class="btn mini highlight" title="Falar com a Revenda">💬 Revenda</button>
+      <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema"></button>
+      <a class="btn mini ghost" href="login-vendedor.html">Minha Conta</a>
+    </div>
+  </header>
+
+  <main class="center-card wide">
+    <h1 class="big">Cadastrar veículo</h1>
+    <p class="lead">Preencha os dados e adicione fotos (principal + múltiplas de defeitos)</p>
+
+    <form id="cadastroForm" class="form-grid">
+      <label>
+        <span class="label">Marca</span>
+        <input id="c_marca" type="text" required placeholder="Fiat, VW...">
+      </label>
+      <label>
+        <span class="label">Modelo</span>
+        <input id="c_modelo" type="text" required placeholder="Uno, Gol...">
+      </label>
+      <label>
+        <span class="label">Ano</span>
+        <input id="c_ano" type="number" required placeholder="2010">
+      </label>
+      <label>
+        <span class="label">Quilometragem (km)</span>
+        <input id="c_km" type="number" placeholder="120000">
+      </label>
+      <label>
+        <span class="label">Preço pedido (R$)</span>
+        <input id="c_preco" type="number" required placeholder="25000">
+      </label>
+
+      <label style="grid-column:1 / -1">
+        <span class="label">Foto principal (capa)</span>
+        <input id="c_foto_principal" type="file" accept="image/*" required>
+      </label>
+
+      <label style="grid-column:1 / -1">
+        <span class="label">Fotos de defeitos (múltiplas)</span>
+        <input id="c_fotos_defeitos" type="file" accept="image/*" multiple>
+        <div id="thumbs" class="thumbs scrollable-vertical"></div>
+      </label>
+
+      <label style="grid-column:1 / -1">
+        <span class="label">Inspeção rápida (descrição)</span>
+        <textarea id="c_inspecao" placeholder="Riscos, batidas, freios, pneus, mecânica..." rows="3"></textarea>
+      </label>
+
+      <label style="grid-column:1 / -1">
+        <span class="label">Observações</span>
+        <textarea id="c_obs" placeholder="Observações gerais" rows="3"></textarea>
+      </label>
+
+      <div class="form-actions full" style="grid-column:1 / -1">
+        <button class="btn large" type="submit">Publicar anúncio</button>
+        <a class="btn ghost" href="login-vendedor.html">Voltar</a>
+      </div>
+    </form>
+
+    <div class="contact-card">
+      <h3>Contato rápido com a Revenda</h3>
+      <p class="muted">Se quiser falar com a revenda agora, clique abaixo (abre WhatsApp)</p>
+      <button id="contactRevenda" class="btn ghost">💬 Falar com a Revenda</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Painel • Revenda</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Revenda • Painel</div>
+    <div class="top-actions">
+      <button id="dealWhats" class="btn mini highlight" title="Falar com a Revenda">💬 Revenda</button>
+      <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema"></button>
+      <a class="btn mini ghost" href="index.html">Sair</a>
+    </div>
+  </header>
+
+  <main class="center-card fluid">
+    <div class="panel-head">
+      <h1 class="big">Veículos disponíveis</h1>
+      <div class="filters">
+        <input id="search" placeholder="Buscar por marca, modelo ou ano..." />
+        <select id="filterStatus">
+          <option value="all">Todos</option>
+          <option value="available">Disponíveis</option>
+          <option value="interested">Interessados</option>
+          <option value="bought">Comprados</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="grid" class="grid-cards"></div>
+
+    <!-- Modal para detalhes -->
+    <div id="modal" class="modal hidden" role="dialog" aria-hidden="true">
+      <div class="modal-card">
+        <button id="modalClose" class="modal-close">✕</button>
+        <div class="modal-body">
+          <div class="modal-gallery">
+            <img id="modalMain" src="" alt="Foto principal">
+            <div id="modalThumbs" class="thumbs scrollable-horizontal"></div>
+          </div>
+          <div class="modal-info">
+            <h2 id="modalTitle"></h2>
+            <div id="modalMeta" class="muted"></div>
+            <p id="modalInspection"></p>
+            <p id="modalObs"></p>
+            <div class="modal-actions modal-actions-row">
+              <button id="waSeller" class="btn">📋 Telefone do Vendedor</button>
+              <button id="markInterested" class="btn ghost">👍 Interessado</button>
+              <button id="markBought" class="btn accent">✅ Comprado</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

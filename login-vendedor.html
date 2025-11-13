@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login / Cadastro — Vendedor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Revenda • Vendedor</div>
+    <div class="top-actions">
+      <button id="dealWhats" class="btn mini highlight" title="Falar com a Revenda">💬 Revenda</button>
+      <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema"></button>
+    </div>
+  </header>
+
+  <main class="center-card wide">
+    <h1 class="big">Cadastro / Login</h1>
+    <p class="lead">Crie sua conta rápida para anunciar veículos</p>
+
+    <form id="vendedorForm" class="form-grid">
+      <label>
+        <span class="label">Nome completo</span>
+        <input id="v_nome" type="text" required placeholder="João da Silva">
+      </label>
+      <label>
+        <span class="label">Email</span>
+        <input id="v_email" type="email" required placeholder="email@exemplo.com">
+      </label>
+      <label>
+        <span class="label">CPF</span>
+        <input id="v_cpf" type="text" required placeholder="000.000.000-00">
+      </label>
+      <label>
+        <span class="label">Endereço</span>
+        <input id="v_endereco" type="text" placeholder="Rua, número, cidade">
+      </label>
+      <label>
+        <span class="label">Telefone (WhatsApp)</span>
+        <input id="v_telefone" type="text" required placeholder="+55 47 9xxxx-xxxx">
+      </label>
+
+      <div class="form-actions full">
+        <button class="btn large" type="submit">Entrar / Cadastrar</button>
+        <a class="btn ghost" href="index.html">Voltar</a>
+      </div>
+    </form>
+
+    <div class="muted">Após entrar você será levado à página de cadastrar veículo.</div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

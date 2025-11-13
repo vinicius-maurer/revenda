@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login — Revenda (Admin)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Revenda • Admin</div>
+    <div class="top-actions">
+      <button id="dealWhats" class="btn mini highlight" title="Falar com a Revenda">💬 Revenda</button>
+      <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema"></button>
+    </div>
+  </header>
+
+  <main class="center-card small">
+    <h1 class="big">Área da Revenda</h1>
+    <form id="adminForm" class="form-grid">
+      <label>
+        <span class="label">Usuário</span>
+        <input id="admin_user" type="text" placeholder="Usuário" required>
+      </label>
+      <label>
+        <span class="label">Senha</span>
+        <input id="admin_pass" type="password" placeholder="Senha" required>
+      </label>
+      <div class="form-actions full">
+        <button class="btn large" type="submit">Entrar</button>
+        <a class="btn ghost" href="index.html">Voltar</a>
+      </div>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
